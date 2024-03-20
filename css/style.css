@@ -1,0 +1,18 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#boardCont{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+#btnCont{
+    margin: 20px 50px;
+}
+#newBoard{
+    padding: 5px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
