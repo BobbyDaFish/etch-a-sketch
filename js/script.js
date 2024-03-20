@@ -1,0 +1,2 @@
+let gridSize = 16;
+
