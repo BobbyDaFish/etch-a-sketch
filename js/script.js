@@ -7,9 +7,7 @@ const gridCell = document.createElement('div');
 gridRow.setAttribute('class', 'grid-row');
 gridCell.setAttribute('class', 'grid-cell');
 
-function createGrid(){ // add a rows to the grid with counting ids
-    
-    
+function createGrid(){ // add a rows to the grid with counting ids 
     for (i = gridSize; i > 0; i--) {
         let newRow = gridRow.cloneNode();
         boardCont.appendChild(newRow).setAttribute('id', i);
