@@ -7,15 +7,21 @@ const gridCell = document.createElement('div');
 gridRow.setAttribute('class', 'grid-row');
 gridCell.setAttribute('class', 'grid-cell');
 
-function createGrid(){
-    for (i = gridSize; i > 0; 1--) {
-        boardCont.appendChild(gridRow).setAttribute('id', i);
+function createGrid(){ // add a rows to the grid with counting ids
+    
+    
+    for (i = gridSize; i > 0; i--) {
+        let newRow = gridRow.cloneNode();
+        boardCont.appendChild(newRow).setAttribute('id', i);
         insertCells(i);
     }
 }
 
-function insertCells(rowID){
+function insertCells(rowID){ // add cells to each row
     for (c = gridSize; c > 0; c--){
-        document.getElementById(rowID).appendChild(gridCell);
+        let newCell = gridCell.cloneNode();
+        document.getElementById(rowID).appendChild(newCell);
     }
 }
+
+createGrid();
