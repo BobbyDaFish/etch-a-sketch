@@ -24,7 +24,7 @@ function insertCells(rowID){ // add cells to each row
 
         const allCells = document.querySelectorAll('.grid-cell');
           
-            for (const a of allCells) {
+            for (const a of allCells) { // add listener to each cell to add class to change color.
             a.addEventListener('mouseenter', function (e){
                 e.stopImmediatePropagation();
                 this.setAttribute("class", "grid-dark");
@@ -35,18 +35,20 @@ function insertCells(rowID){ // add cells to each row
     }
 }
 
-function newGrid(){
-    while (boardCont.firstChild){
-        boardCont.removeChild(boardCont.lastChild);
-    }
-    gridSize = prompt("How big do you want your board? Choose between 1 and 100.");
-    
-    while (gridSize < 1 || gridSize > 100 || NaN(gridSize)){
-        gridSize = prompt("Invalid Entry. Choose between 1 and 100.");
-    }
-    createGrid();
-}
-
 createGrid();
 
-newGridBtn.addEventListener('click', newGrid());
+newGridBtn.addEventListener('click', function (){ // new board button to start a new board
+        
+        while (boardCont.firstChild){  //remove original board
+            boardCont.removeChild(boardCont.lastChild);
+        }
+        
+        gridSize = prompt("Choose a board size between 1 and 100.");
+        
+        while (gridSize < 1 || gridSize > 100 || isNaN(gridSize)){
+            gridSize = prompt("Invalid Entry. Choose between 1 and 100.");
+        }
+        
+        createGrid();
+    
+});

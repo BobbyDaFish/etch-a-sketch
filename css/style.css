@@ -32,15 +32,15 @@ body{
     background-color: darkgray;
     justify-content: space-around;
     align-items: center;
-    margin: 5px;
+    margin: 1px;
     flex: 1;
     width: 100%;
 }
 .grid-dark{
-    background-color: black;
+    background-color: #282828;
     justify-content: space-around;
     align-items: center;
-    margin: 5px;
+    margin: 1px;
     flex: 1;
     width: 100%;
 }
