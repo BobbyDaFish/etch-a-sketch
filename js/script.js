@@ -23,3 +23,7 @@ function insertCells(rowID){ // add cells to each row
 }
 
 createGrid();
+
+document.querySelector('.grid-cell').addEventListener('mouseover', function() {
+    
+})
