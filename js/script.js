@@ -43,7 +43,7 @@ newGridBtn.addEventListener('click', function (){ // new board button to start a
             boardCont.removeChild(boardCont.lastChild);
         }
         
-        gridSize = prompt("Choose a board size between 1 and 100.");
+        gridSize = prompt("Choose a board size between 1 and 100."); // user input for size
         
         while (gridSize < 1 || gridSize > 100 || isNaN(gridSize)){
             gridSize = prompt("Invalid Entry. Choose between 1 and 100.");
