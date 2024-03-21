@@ -38,4 +38,9 @@ body{
 }
 .grid-dark{
     background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    flex: 1;
+    width: 100%;
 }

@@ -19,11 +19,20 @@ function insertCells(rowID){ // add cells to each row
     for (c = gridSize; c > 0; c--){
         let newCell = gridCell.cloneNode();
         document.getElementById(rowID).appendChild(newCell);
+
+
+        const allCells = document.querySelectorAll('.grid-cell');
+          
+            for (const a of allCells) {
+            a.addEventListener('mouseenter', function (e){
+                e.stopImmediatePropagation();
+                this.setAttribute("class", "grid-dark");
+            });
+        }
+
+        
     }
 }
 
-createGrid();
 
-document.querySelector('.grid-cell').addEventListener('mouseover', function() {
-    
-})
+createGrid();
